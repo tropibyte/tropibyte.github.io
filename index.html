@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tropibyte • Refreshing Apps</title>
+  <style>
+    /* --- RESET & BASE --- */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:"Aptos",sans-serif; color:#333; min-width:700px;}
+
+    /* --- HEADER + LOGO + RIBBONS --- */
+    .header-wrapper { position: relative; }
+    .logo-floating {
+      position: absolute; top: 4px; left: 1rem; z-index:10;
+      max-height:128px; height:auto;
+    }
+    .ribbon-dark, .ribbon-light {
+      width:100%; text-align:center;
+    }
+    .ribbon-dark {
+      background:#215E99; color:#fff; padding:1rem 0;
+    }
+    .ribbon-light {
+      background:#95DCF7; padding:1rem 0;
+    }
+    .container {
+      max-width:960px; margin:0 auto; padding:0 1rem;
+    }
+    .logo-nav {
+      display:flex; align-items:center; justify-content:center;
+      <!-- min-height:128px; -->
+    }
+    .logo-nav nav ul {
+      list-style:none; display:flex; gap:2rem; font-weight:bold;
+    }
+    .logo-nav nav a {
+      color:#215E99; text-decoration:none;
+    }
+    .logo-nav nav a:hover {
+      text-decoration:underline;
+    }
+
+    /* --- BANNER --- */
+    .banner {
+      text-align:center;
+      margin:2rem 0;
+    }
+    .banner img {
+      max-width:100%; height:auto; border:none;
+    }
+
+    /* --- SECTION STYLING --- */
+    section {
+      padding:3rem 0;
+      width:100%;
+    }
+    /* alternate backgrounds */
+    section:nth-of-type(odd)  { background:#f0f9ff; }
+    section:nth-of-type(even) { background:#fff;      }
+    /* center text */
+    section .container { text-align:center; }
+    section h2 {
+      font-size:2rem;
+      margin-bottom:1rem;
+    }
+    section p,
+    section ul {
+      max-width:700px;
+      margin:0 auto;
+      line-height:1.5;
+    }
+    section ul {
+      list-style:none;
+      padding:0;
+    }
+    section ul li {
+      margin:0.5rem 0;
+    }
+
+    /* --- FOOTER (optional) --- */
+    footer {
+      text-align:center;
+      padding:1rem 0;
+      background:#222; color:#eee;
+      font-size:0.875rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header-wrapper">
+    <img src="images/tropibyte-logo.png"
+         alt="Tropibyte Logo"
+         class="logo-floating">
+
+    <div class="ribbon-dark">
+      <div class="container">
+        Tropibyte: Refreshing Apps. Sunny Ideas.
+      </div>
+    </div>
+    <div class="ribbon-light">
+      <div class="container logo-nav">
+        <nav>
+          <ul>
+            <li>&nbsp;&nbsp;<a href="#home">Home</a>&nbsp;&nbsp;</li>|
+            <li>&nbsp;&nbsp;<a href="#about">About</a>&nbsp;&nbsp;</li>|
+            <li>&nbsp;&nbsp;<a href="#services">Services</a>&nbsp;&nbsp;</li>|
+            <li>&nbsp;&nbsp;<a href="#apps">Apps</a>&nbsp;&nbsp;</li>|
+            <li>&nbsp;&nbsp;<a href="#contact">Contact</a>&nbsp;&nbsp;</li>
+        </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <!-- banner.jpg -->
+  <div class="container">
+    <div class="banner">
+      <img src="images/banner.jpg" alt="Tropibyte Banner">
+    </div>
+  </div>
+
+  <!-- se ctions -->
+  <section id="home">
+    <div class="container">
+      <h2>Home</h2>
+      <p>Welcome to Tropibyte, where refreshing apps meet sunny ideas.</p>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2>About</h2>
+      <p>Tropibyte combines 25+ years of Windows &amp; .NET expertise with cutting-edge blockchain and AI solutions.</p>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <h2>Services</h2>
+      <ul>               
+        <li>Windows OS experts.  Win32 API Development.  MFC</li>
+        <li>Enterprise &amp; Desktop Development (C++, C#)</li>
+        <li>Cloud Architecture &amp; DevOps (Azure, AWS)</li>
+        <li>AI Integrations &amp; Custom LLM Solutions</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="apps">
+    <div class="container">
+      <h2>Apps</h2>
+      <p>Check out our latest tools and applications—coming soon!</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:tropibyte@gmail.com">tropibyte@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/company/tropibyte/">/company/tropibyte</a></p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Tropibyte. All rights reserved.
+  </footer>
+
+</body>
+</html>
