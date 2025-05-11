@@ -109,6 +109,9 @@
         max-height: 60px;
       }
       body { font-family:"Aptos",sans-serif; color:#333; }
+      .ribbon-dark {
+        padding: 0.5rem 0;    /* half of your default 1rem */
+      }
       .ribbon-light {
         padding-top: 0;
       }
@@ -205,6 +208,35 @@
   <footer>
     &copy; 2025 Tropibyte. All rights reserved.
   </footer>
+  <script>
+    (function() {
+      const VP = document.getElementById('vp-meta');
 
+      function adjustZoom() {
+        const w = window.innerWidth;
+        if (w < 400) {
+          // Option A: tweak the viewport scale
+          VP.setAttribute(
+            'content',
+            'width=device-width, initial-scale=0.8, maximum-scale=1.0'
+          );
+          
+          // Option B (fallback): CSS zoom (not in Firefox)
+          document.body.style.zoom = '80%';
+        } else {
+          // restore defaults on larger screens
+          VP.setAttribute(
+            'content',
+            'width=device-width, initial-scale=1.0'
+          );
+          document.body.style.zoom = '';
+        }
+      }
+
+      // run on load and on resize
+      window.addEventListener('DOMContentLoaded', adjustZoom);
+      window.addEventListener('resize', adjustZoom);
+    })();
+  </script>
 </body>
 </html>
