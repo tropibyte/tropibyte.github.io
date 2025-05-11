@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tropibyte • Refreshing Apps</title>
   <style>
     /* --- RESET & BASE --- */
     * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family:"Aptos",sans-serif; color:#333; min-width:800px;}
+    body { font-family:"Aptos",sans-serif; color:#333; min-width: 750px;}
 
     /* --- HEADER + LOGO + RIBBONS --- */
     .header-wrapper { position: relative; }
@@ -87,6 +88,16 @@
       background:#222; color:#eee;
       font-size:0.875rem;
     }     
+    @media (max-width: 700px) {
+      .ribbon-dark {
+      padding-top: calc(60px + 0.5rem);
+    }
+
+  /* 3. Tweak logo spacing too, if you like */
+  .logo-floating {
+    margin-bottom: 0.5rem;  /* less gap under logo */
+    max-height: 60px;       /* ensure it stays small */
+  }
     @media (max-width: 768px) {
       .logo-floating {
         position: relative !important;
@@ -97,16 +108,18 @@
         margin: 1rem auto;
         max-height: 60px;
       }
-      .ribbon-dark,
+      body { font-family:"Aptos",sans-serif; color:#333; }
       .ribbon-light {
         padding-top: 0;
       }
       .logo-nav {
         min-height: auto;
         padding: 0.5rem 0;
+        font-size: 0.8rem;
       }
-      .tropi_header{
-        font-size: 16pt;
+      .tropi_header {
+        font-size: 1.2rem;      /* about 16px */
+        margin: 0;            /* remove any default spacing */
         font-weight: 500;
         vertical-align: middle;
       }
